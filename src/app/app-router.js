@@ -7,8 +7,6 @@ angular.module('beeroclock.routes', [
     $routeProvider
 
         .when('/', {
-            controller: 'MainController',
-            controllerAs: 'vm',
             templateUrl: 'app/common/views/main.tpl.html'
         })
 
