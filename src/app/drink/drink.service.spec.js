@@ -8,7 +8,7 @@ describe('Drinks Service', function () {
 
     var Drink;
 
-    beforeEach(module('beeroclock.service'));
+    beforeEach(module('beeroclock.services'));
 
     beforeEach(inject(function (_Drink_) {
         Drink = _Drink_;

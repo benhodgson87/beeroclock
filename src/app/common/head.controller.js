@@ -1,20 +1,21 @@
 'use strict';
 
-angular.module('beeroclock.controller')
+angular.module('beeroclock.controllers')
 
 /**
  * A controller for the page head
  */
 
-.controller('HeadController', function($rootScope, appConfig){
+.controller('HeadController', function($rootScope){
     var vm = this,
+        time,
         titleSep = ' | ',
-        titleText = appConfig.name || document.title,
-        defaultTitle = titleText;
+        titleText = document.title;
 
-    vm.pageTitle = defaultTitle;
+    vm.pageTitle = titleText;
 
     $rootScope.$on('timerUpdate', function (ev, args) {
-        vm.pageTitle = args.time + titleSep + titleText || defaultTitle;
+        time = args.full;
+        vm.pageTitle = time + titleSep + titleText || titleText;
     });
 });

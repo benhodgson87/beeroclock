@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('beeroclock.directive')
+angular.module('beeroclock.directives')
 
 /**
  * @ngdoc directive

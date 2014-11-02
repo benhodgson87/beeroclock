@@ -4,13 +4,14 @@ angular.module('beeroclock', [
     'ngSanitize',
     'LocalStorageModule',
     'beeroclock.routes',
-    'beeroclock.controller',
-    'beeroclock.service',
-    'beeroclock.directive'
+    'beeroclock.controllers',
+    'beeroclock.services',
+    'beeroclock.directives'
 ])
 
 .constant('appConfig', {
-    'name': 'Beer O\'Clock',
+    'name': 'Beer O\'clock',
+    'lang': 'en',
     'timer': {
         'hours': 5,
         'mins': 0
@@ -25,4 +26,9 @@ angular.module('beeroclock', [
 
 })
 
-.run(function () {});
+.run(function ($rootScope, Dictionary) {
+
+    // Populate Dictionary
+    Dictionary.update();
+
+});

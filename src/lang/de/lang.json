@@ -1,0 +1,19 @@
+"de": {
+    "name": "Deutsche",
+    "strings": {
+        "beeroclock": "Beer O'clock",
+        "how_long_tagline": "Wie lange, bis die wichtigste Zeit des Tages?",
+        "created_by": "Brewed by %s and %s",
+        "view_github": "View on Github",
+        "its_beer_oclock": "It's Beer O'clock!",
+        "time": {
+            "hours": "Hours",
+            "mins": "Minutes",
+            "secs": "Seconds"
+        },
+        "bubbles": {
+            "toggle_on": "Bubbles On",
+            "toggle_off": "Bubbles Off"
+        }
+    }
+}
