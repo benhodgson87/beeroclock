@@ -8,7 +8,7 @@ angular.module('beeroclock.service')
  * @description A service to return different drinks types
  */
 
-.factory('Drinks', function () {
+.factory('Drink', function () {
 
     var glass = {
         'pint': {

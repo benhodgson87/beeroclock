@@ -18,7 +18,7 @@ angular.module('beeroclock.directive')
         templateUrl: 'app/timer/views/_timer.tpl.html',
         link: function (scope) {
             function formatTime (val) {
-                if (val < 10) val += '0';
+                if (val < 10) val = '0' + val;
                 return val;
             }
 

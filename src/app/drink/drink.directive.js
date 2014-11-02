@@ -8,7 +8,7 @@ angular.module('beeroclock.directive')
  * @description Pour me a drink...
  */
 
-.directive('drink', function (localStorageService, Drinks) {
+.directive('drink', function (localStorageService, Drink) {
     return {
         restrict: 'EA',
         replace: true,
@@ -19,9 +19,9 @@ angular.module('beeroclock.directive')
         link: function (scope) {
 
             // Get saved drink, or use default
-            var drink = localStorageService.get('userDrink') || Drinks.default();
+            var drink = localStorageService.get('userDrink') || Drink.default();
 
-            scope.drink = Drinks.get(drink);
+            scope.drink = Drink.get(drink);
         }
     };
 });

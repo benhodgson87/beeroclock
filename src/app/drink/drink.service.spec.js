@@ -6,12 +6,12 @@ describe('Drinks Service', function () {
      * Setup Dependencies
      */
 
-    var Drinks;
+    var Drink;
 
     beforeEach(module('beeroclock.service'));
 
-    beforeEach(inject(function (_Drinks_) {
-        Drinks = _Drinks_;
+    beforeEach(inject(function (_Drink_) {
+        Drink = _Drink_;
     }));
 
 
@@ -22,20 +22,20 @@ describe('Drinks Service', function () {
     describe('should get a drink', function () {
 
         it('and return a pint of lager', function () {
-            var get = Drinks.get('pint-lager');
+            var get = Drink.get('pint-lager');
 
             expect(get.name).toBe('Pint of Lager');
         });
 
         it('and error if no drink specified', function () {
             expect(function () {
-                Drinks.get();
+                Drink.get();
             }).toThrow();
         });
 
         it('and error if specified drink does not exist', function () {
             expect(function () {
-                Drinks.get('not-a-real-drink');
+                Drink.get('not-a-real-drink');
             }).toThrow();
         });
 
@@ -44,7 +44,7 @@ describe('Drinks Service', function () {
     describe('should find the default (first) drink', function () {
 
         it('and return the key', function () {
-            var get = Drinks.default();
+            var get = Drink.default();
 
             expect(get).toBe('pint-lager');
         });
