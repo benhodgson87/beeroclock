@@ -1,2 +1,22 @@
+# General
+
 .DS_Store
 .sass-cache
+.tmp
+
+
+# Node/Bower
+
+node_modules
+/node_modules/*/node-modules/
+src/libs
+
+
+# App Files
+
+dist
+reports
+coverage
+src/app/templates.js
+src/styles/css/**/*
+src/styles/css/**

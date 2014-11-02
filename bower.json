@@ -1,0 +1,35 @@
+{
+  "name": "beeroclock",
+  "title": "Beer O'Clock",
+  "version": "2.0.0",
+  "private": false,
+  "repository": "https://github.com/jamesrwhite/beeroclock",
+  "authors": [
+    "Ben Hodgson <work@benhodgson.net>",
+    "James White <dev.jameswhite+portfolio@gmail.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs",
+    "Gruntfile.js",
+    "package.json",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.3.1",
+    "angular-sanitize": "1.3.1",
+    "angular-local-storage": "~0.0.7",
+    "angular-module-shim": "https://github.com/DveMac/angular-module-shim.git"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.3.1",
+    "angular-route": "~1.3.1"
+  },
+  "resolutions": {
+    "angular": "1.3.1",
+    "angular-mocks": "1.3.1"
+  }
+}
