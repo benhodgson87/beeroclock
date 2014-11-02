@@ -4,7 +4,6 @@
     "esnext": true,
     "bitwise": true,
     "camelcase": true,
-    "curly": true,
     "eqeqeq": true,
     "immed": true,
     "latedef": true,
@@ -18,6 +17,15 @@
     "trailing": true,
     "smarttabs": true,
     "globals": {
-        "angular": false
+        "angular": false,
+        "it": false,
+        "xit": false,
+        "describe": false,
+        "xdescribe": false,
+        "beforeEach": false,
+        "afterEach": false,
+        "expect": false,
+        "spyOn": false,
+        "inject": false
     }
 }

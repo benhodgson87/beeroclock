@@ -6,8 +6,7 @@ module.exports = {
     },
     scripts: {
         files: ['<%= meta.src %>/app/**/*.js'],
-        // tasks: ['test:unit'],
-        tasks: ['jshint'],
+        tasks: ['jshint', 'test:unit'],
         options: {
             spawn: false
         }

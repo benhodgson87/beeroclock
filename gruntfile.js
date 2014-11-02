@@ -15,6 +15,7 @@ module.exports = function (grunt) {
         'concurrent:dev',
         'autoprefixer:dev',
         'jshint',
+        'karma:unit',
         'connect:app',
         'watch'
     ]);
@@ -22,6 +23,11 @@ module.exports = function (grunt) {
     // Create a fully built production folder
     grunt.registerTask('dist', [
 
+    ]);
+
+    // Run unit tests
+    grunt.registerTask('test', [
+        'karma:unit'
     ]);
 
 };

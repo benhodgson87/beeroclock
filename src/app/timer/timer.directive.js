@@ -18,39 +18,40 @@ angular.module('beeroclock.directive')
         templateUrl: 'app/timer/views/_timer.tpl.html',
         link: function (scope) {
             function formatTime (val) {
-                if (val < 10) {
-                    val = '0' + val;
-                }
-
+                if (val < 10) val += '0';
                 return val;
             }
 
-            var time, hours, minutes, seconds, fmtTime,
+            var time,
                 defaultTime = localStorageService.get('userTime') || appConfig.timer;
 
-            scope.time = defaultTime;
+            scope.timer = defaultTime;
 
             $interval(function () {
-                time = new Date();
-                hours = formatTime(time.getHours());
-                minutes = formatTime(time.getMinutes());
-                seconds = formatTime(time.getSeconds());
-                fmtTime = [
-                    hours,
-                    minutes,
-                    seconds
+                var date = new Date();
+
+                time = {
+                    hours: formatTime(date.getHours()),
+                    minutes: formatTime(date.getMinutes()),
+                    seconds: formatTime(date.getSeconds())
+                };
+
+                time.full = [
+                    time.hours,
+                    time.minutes,
+                    time.seconds
                 ].join(':');
 
-                scope.hours = hours;
-                scope.mins  = minutes;
-                scope.secs  = seconds;
-                scope.time  = fmtTime;
+                scope.hours = time.hours;
+                scope.mins  = time.minutes;
+                scope.secs  = time.seconds;
+                scope.timer  = time.full;
 
                 $rootScope.$broadcast('timerUpdate', {
-                    hours: hours,
-                    mins: minutes,
-                    secs: seconds,
-                    time : fmtTime
+                    hours: time.hours,
+                    mins: time.minutes,
+                    secs: time.seconds,
+                    time : time.full
                 });
             }, 1000);
 
