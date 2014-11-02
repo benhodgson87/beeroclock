@@ -19,7 +19,7 @@ angular.module('beeroclock.directive')
         link: function (scope) {
 
             // Get saved drink, or use default
-            var drink = localStorageService.get('drink') || Drinks.default();
+            var drink = localStorageService.get('userDrink') || Drinks.default();
 
             scope.drink = Drinks.get(drink);
         }

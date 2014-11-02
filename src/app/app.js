@@ -9,6 +9,15 @@ angular.module('beeroclock', [
     'beeroclock.directive'
 ])
 
+.constant('appConfig', {
+    'name': 'Beer O\'Clock',
+    'timer': {
+        'hours': 5,
+        'mins': 0
+    },
+    'drink': 'pint-lager'
+})
+
 .config(function ($locationProvider, localStorageServiceProvider) {
 
     // LocalStorage Config
