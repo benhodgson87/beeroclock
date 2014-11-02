@@ -28,10 +28,12 @@ describe('Drinks Service', function () {
         });
 
         it('and error if no drink specified', function () {
-            expect(Drinks.get).toThrow();
+            expect(function () {
+                Drinks.get();
+            }).toThrow();
         });
 
-        it('and error if drink does not exist', function () {
+        it('and error if specified drink does not exist', function () {
             expect(function () {
                 Drinks.get('not-a-real-drink');
             }).toThrow();
@@ -39,7 +41,7 @@ describe('Drinks Service', function () {
 
     });
 
-    describe('should get the default (first) drink', function () {
+    describe('should find the default (first) drink', function () {
 
         it('and return the key', function () {
             var get = Drinks.default();

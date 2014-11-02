@@ -22,19 +22,6 @@ module.exports = {
         ]
     },
 
-    watch: {
-        singleRun: false,
-        browsers: ['Chrome'],
-        plugins: [
-            'karma-chrome-launcher',
-            'karma-jasmine',
-            'karma-phantomjs-launcher'
-        ],
-        reporters: [
-            'progress'
-        ]
-    },
-
     reports: {
         background: false,
         singleRun: true,
