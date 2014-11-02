@@ -4,7 +4,7 @@ module.exports = function (config) {
     config.set({
 
         // base path, that will be used to resolve files and exclude
-        basePath: '../',
+        basePath: '../../',
 
 
         // frameworks to use
@@ -19,6 +19,7 @@ module.exports = function (config) {
             'src/libs/angular-route/angular-route.js',
             'src/libs/angular-module-shim/dist/angular-module-shim.js',
             'src/libs/angular-local-storage/angular-local-storage.js',
+            'tests/unit/mocks.js',
             'src/app/**/*.js'
         ],
 
@@ -32,7 +33,7 @@ module.exports = function (config) {
 
         // test results reporter to use
         // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-        reporters: ['progress'],
+        reporters: ['dots', 'progress'],
 
         plugins: [
             'karma-chrome-launcher',

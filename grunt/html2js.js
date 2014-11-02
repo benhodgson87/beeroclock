@@ -13,7 +13,7 @@ module.exports = {
                 removeComments: true
             }
         },
-        src: [ 'src/app/**/*.tpl.html' ],
-        dest: 'src/app/templates.js'
+        src: [ '<%= meta.src %>/app/**/*.tpl.html' ],
+        dest: '<%= meta.src %>/app/templates.js'
     }
 };

@@ -2,16 +2,11 @@
 
 module.exports = {
     dev: [
-        'sass:dev',
-        'html2js:app'
-    ],
-    test: [
-        'jshint',
-        'html2js:app'
+        'concat:json',
+        'html2js:app',
+        'sass:dev'
     ],
     dist: [
-        'ngdocs',
-        'lodashAutobuild',
         'html2js:app',
         'sass:dist'
     ]

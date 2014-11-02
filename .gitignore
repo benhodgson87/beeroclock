@@ -17,6 +17,8 @@ src/libs
 dist
 reports
 coverage
-src/app/templates.js
 src/styles/css/**/*
 src/styles/css/**
+src/lang/lang.json
+src/app/languages.js
+src/app/templates.js

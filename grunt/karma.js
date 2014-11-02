@@ -7,7 +7,7 @@ function extractFolder(browser) {
 module.exports = {
 
     options: {
-        configFile: 'config/karma.conf.js'
+        configFile: 'tests/unit/karma.conf.js'
     },
 
     unit: {

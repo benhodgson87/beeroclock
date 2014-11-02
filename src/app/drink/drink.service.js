@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('beeroclock.service')
+angular.module('beeroclock.services')
 
 /**
  * @ngdoc service

@@ -6,7 +6,8 @@ module.exports = {
         cwd: '<%= meta.src %>',
         src: [
             '{,*/}*.html',
-            'assets/**/*'
+            'assets/**/*',
+            'lang/lang.json'
         ],
         dest: '<%= meta.dist %>'
     }

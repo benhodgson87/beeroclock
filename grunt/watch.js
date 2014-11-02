@@ -21,5 +21,9 @@ module.exports = {
     },
     configFiles: {
         files: ['gruntfile.js']
-    }
+    },
+    languages: {
+        files: ['<%= meta.src %>/lang/**/*.json'],
+        tasks: ['concat:json']
+    },
 };
